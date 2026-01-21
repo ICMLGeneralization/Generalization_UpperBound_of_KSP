@@ -115,7 +115,24 @@ python demo.py
 ```bash
 python figure_drawing.py
 ```
-#
+# Acknowledgement
+We appreciate the following github repo very much for the valuable code base and datasets:
+
+https://github.com/cure-lab/LTSF-Linear
+
+https://github.com/zhouhaoyi/Informer2020
+
+https://github.com/thuml/Autoformer
+
+https://github.com/MAZiqing/FEDformer
+
+https://github.com/alipay/Pyraformer
+
+https://github.com/ts-kim/RevIN
+
+https://github.com/timeseriesAI/tsai
+
+
 
 # Contact
 If you have any questions or concerns, please contact us: samuelguan173@outlook.com or submit an issue
