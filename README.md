@@ -120,8 +120,6 @@ We equally appreciate the following github repo very much for the valuable code 
 
 https://github.com/thuml/Autoformer
 
-https://github.com/MAZiqing/FEDformer
-
 https://github.com/yuqinie98/PatchTST
 
 # Contact
