@@ -97,17 +97,23 @@ ICML2026/
 └─ figure.png
 ```
 ## Start
-Install the libraries.
+### Install the libraries.
 ```bash
 pip install -r requirements.txt
 ```
 
-Calculate the upper bound
+### Calculate the upper bound
 ```bash
 python demo.py
 ```
+** The trainning will take a long time.** Training takes a long time. If you want to fast validate the result, please set the 'is_training=0' in config!
 
-Draw the figure of UpperBound-T
+** After training, you need to set the 'is_training=0' in config! Then run the demo.py again to get the true result! **
+<img width="1133" height="699" alt="image" src="https://github.com/user-attachments/assets/81560b3c-0f28-48db-9e6f-b481b13db4fe" />
+
+
+
+### Draw the figure of UpperBound-T
 ```bash
 python figure_drawing.py
 ```
