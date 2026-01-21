@@ -118,19 +118,9 @@ python figure_drawing.py
 # Acknowledgement
 We equally appreciate the following github repo very much for the valuable code base and datasets:
 
-https://github.com/cure-lab/LTSF-Linear
-
-https://github.com/zhouhaoyi/Informer2020
-
 https://github.com/thuml/Autoformer
 
 https://github.com/MAZiqing/FEDformer
-
-https://github.com/alipay/Pyraformer
-
-https://github.com/ts-kim/RevIN
-
-https://github.com/timeseriesAI/tsai
 
 https://github.com/yuqinie98/PatchTST
 
