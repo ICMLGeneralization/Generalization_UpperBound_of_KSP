@@ -111,9 +111,10 @@ python demo.py
 **After training, you need to set the 'is_training=0' in config! Then run the demo.py again to get the true result!**
 <img width="1133" height="699" alt="image" src="https://github.com/user-attachments/assets/81560b3c-0f28-48db-9e6f-b481b13db4fe" />
 
-
-
 ### Draw the figure of UpperBound-T
 ```bash
 python figure_drawing.py
 ```
+
+# Thanks
+Thanks the project named PatchTST with their code support!
