@@ -3,6 +3,7 @@ This is the demo of numerical calculation of the upper bound of K-run success pr
 In this source, we provide a trained weight of PatchTST which can be run directly to validate the upper bound of KSP under ETTh (K=1, T=96).
 Besides, we also probvide the original experimental data of visualization of "UpperBound & T" under ETTh (K=1) for four time series forecasting methods.
 ## Directory
+```text
 ICML2026/
 ├─ Experiment/
 │  └─ GeneralizationUpperBound/
@@ -94,19 +95,19 @@ ICML2026/
 │  ├─ ETTh_UpperBound_Visualization.csv
 │  └─ figure_drawing.py
 └─ figure.png
-
+```
 ## Start
 Install the libraries.
-```
+```bash
 pip install -r requirements.txt
 ```
 
 Calculate the upper bound
-```
+```bash
 python demo.py
 ```
 
 Draw the figure of UpperBound-T
-```
+```bash
 python figure_drawing.py
 ```
