@@ -106,7 +106,7 @@ pip install -r requirements.txt
 ```bash
 python demo.py
 ```
-**The trainning will take a long time.** Training takes a long time. If you want to fast validate the result, please set the 'is_training=0' in config (In the demo.py line 156)!
+**The trainning will take a long time.** Training takes a long time. If you want to fast validate the result, please set the 'is_training=0' in config (In the demo.py line 156)! The project has the trained weight of PatchTST under ETTh for K=1 T=96!
 
 **After training, you need to set the 'is_training=0' in config! Then run the demo.py again to get the true result!**
 <img width="1133" height="699" alt="image" src="https://github.com/user-attachments/assets/81560b3c-0f28-48db-9e6f-b481b13db4fe" />
