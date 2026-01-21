@@ -115,6 +115,3 @@ python demo.py
 ```bash
 python figure_drawing.py
 ```
-
-# Thanks
-Thanks the project named PatchTST with their code support!
