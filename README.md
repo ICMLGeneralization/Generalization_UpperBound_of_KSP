@@ -116,7 +116,7 @@ python demo.py
 python figure_drawing.py
 ```
 # Acknowledgement
-We appreciate the following github repo very much for the valuable code base and datasets:
+We equally appreciate the following github repo very much for the valuable code base and datasets:
 
 https://github.com/cure-lab/LTSF-Linear
 
@@ -132,7 +132,7 @@ https://github.com/ts-kim/RevIN
 
 https://github.com/timeseriesAI/tsai
 
-
+https://github.com/yuqinie98/PatchTST
 
 # Contact
 If you have any questions or concerns, please contact us: samuelguan173@outlook.com or submit an issue
