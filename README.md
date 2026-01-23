@@ -1,7 +1,3 @@
-下面是一版**语言更干净、结构更清晰、偏 ICML/匿名代码仓库风格**的美化版本。我保持了技术含义不变，只做了措辞、逻辑顺序和一致性上的优化。
-
----
-
 # Numerical Calculation Demo (Anonymous Release)
 
 This repository provides a numerical demonstration of the proposed **upper bound on the (K)-run success probability (KSP)** between the *in-distribution* (ID) and the *bridge distribution* (BD).
