@@ -102,11 +102,7 @@ python figure_drawing.py
 
 This script reproduces the **UpperBound–(T)** curves based on the provided experimental data.
 
----
 
-如果你愿意，我可以再帮你做两件事之一：
-一是把这份 README 调到**更偏 ICML 官方补充材料 / artifact evaluation 风格**；
-二是压缩成一个**极简版匿名仓库 README**，只保留 reviewer 必要信息。
 
 
 
