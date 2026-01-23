@@ -11,7 +11,7 @@ This code is intended for **numerical verification and visualization**, rather t
 
 ---
 
-## Directory Structure
+## 🗂️ Directory Structure
 
 ```text
 ICML2026/
@@ -51,7 +51,7 @@ ICML2026/
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Install Dependencies
 
@@ -79,7 +79,7 @@ in `demo.py` (line 156), and then run the script.
 The repository already includes trained PatchTST weights under ETTh1 with:
 $$K=1,\quad T=96,\quad a=0.0,\quad \varepsilon = 1\sigma.$$
 
-**Important:**
+**⚠️Important:**
 If you train the model from scratch (`is_training = 1`), you must set `is_training = 0` **after training** and rerun `demo.py` to obtain the final numerical results.
 
 <p align="center">
