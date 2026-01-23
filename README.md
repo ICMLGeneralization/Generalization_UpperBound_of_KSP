@@ -1,8 +1,22 @@
+下面是一版**语言更干净、结构更清晰、偏 ICML/匿名代码仓库风格**的美化版本。我保持了技术含义不变，只做了措辞、逻辑顺序和一致性上的优化。
+
+---
+
 # Numerical Calculation Demo (Anonymous Release)
-This is the demo of numerical calculation of the upper bound of K-run success probability between the In-distribution and the Bridge Distribution.
-In this source, we provide a trained weight of PatchTST which can be run directly to validate the upper bound of KSP under ETTh (K=1, T=96).
-Besides, we also probvide the original experimental data of visualization of "UpperBound & T" under ETTh (K=1) for four time series forecasting methods.
-## Directory
+
+This repository provides a numerical demonstration of the proposed **upper bound on the (K)-run success probability (KSP)** between the *in-distribution* (ID) and the *bridge distribution* (BD).
+
+The demo includes:
+
+* A **pretrained PatchTST model** that can be directly used to validate the theoretical upper bound on KSP under the **ETTh1** dataset with (K=1) and prediction horizon (T=96).
+* The **original experimental data** used to visualize the relationship between the upper bound and the prediction length (T) (“UpperBound–(T)”) under ETTh1, covering **four time-series forecasting models**.
+
+This code is intended for **numerical verification and visualization**, rather than large-scale benchmarking.
+
+---
+
+## Directory Structure
+
 ```text
 ICML2026/
 ├─ Experiment/
@@ -10,85 +24,27 @@ ICML2026/
 │     ├─ Formers/
 │     │  ├─ FEDformer/
 │     │  │  ├─ data_provider/
-│     │  │  │  ├─ data_factory.py
-│     │  │  │  └─ data_loader.py
 │     │  │  ├─ exp/
-│     │  │  │  ├─ exp_basic.py
-│     │  │  │  └─ exp_main.py
 │     │  │  ├─ layers/
-│     │  │  │  ├─ AutoCorrelation.py
-│     │  │  │  ├─ Autoformer_EncDec.py
-│     │  │  │  ├─ Embed.py
-│     │  │  │  ├─ FourierCorrelation.py
-│     │  │  │  ├─ MultiWaveletCorrelation.py
-│     │  │  │  ├─ SelfAttention_Family.py
-│     │  │  │  └─ Transformer_EncDec.py
 │     │  │  ├─ models/
-│     │  │  │  ├─ Autoformer.py
-│     │  │  │  ├─ FEDformer.py
-│     │  │  │  ├─ Informer.py
-│     │  │  │  └─ Transformer.py
 │     │  │  └─ utils/
-│     │  │     ├─ masking.py
-│     │  │     ├─ metrics.py
-│     │  │     ├─ timefeatures.py
-│     │  │     └─ tools.py
 │     │  └─ Pyraformer/
 │     │     ├─ pyraformer/
-│     │     │  ├─ Layers.py
-│     │     │  ├─ Modules.py
-│     │     │  ├─ PAM_TVM.py
-│     │     │  ├─ Pyraformer_LR.py
-│     │     │  ├─ Pyraformer_SS.py
-│     │     │  ├─ SubLayers.py
-│     │     │  ├─ embed.py
-│     │     │  ├─ graph_attention.py
-│     │     │  └─ hierarchical_mm_tvm.py
 │     │     ├─ utils/
-│     │     │  ├─ timefeatures.py
-│     │     │  └─ tools.py
 │     │     ├─ data_loader.py
 │     │     ├─ long_range_main.py
-│     │     ├─ preprocess_elect.py
-│     │     ├─ preprocess_flow.py
-│     │     ├─ preprocess_wind.py
-│     │     ├─ simulate_sin.py
+│     │     ├─ preprocess_*.py
 │     │     └─ single_step_main.py
 │     ├─ checkpoints/
-│     │  └─ ETTh1_96_96_PatchTST_ETTh1_ftM_sl96_ll48_pl96_dm256_nh4_el2_dl1_df2048_fc1_ebtimeF_dtTrue_Exp_0/
+│     │  └─ ETTh1_96_96_PatchTST_*/
 │     │     └─ checkpoint.pth
 │     ├─ data_provider/
-│     │  ├─ data_factory.py
-│     │  └─ data_loader.py
 │     ├─ dataset/
 │     │  └─ ETTh1.csv
 │     ├─ exp/
-│     │  ├─ exp_basic.py
-│     │  └─ exp_main.py
 │     ├─ layers/
-│     │  ├─ AutoCorrelation.py
-│     │  ├─ Autoformer_EncDec.py
-│     │  ├─ Embed.py
-│     │  ├─ PatchTST_backbone.py
-│     │  ├─ PatchTST_layers.py
-│     │  ├─ RevIN.py
-│     │  ├─ SelfAttention_Family.py
-│     │  └─ Transformer_EncDec.py
 │     ├─ models/
-│     │  ├─ Autoformer.py
-│     │  ├─ DLinear.py
-│     │  ├─ Informer.py
-│     │  ├─ Linear.py
-│     │  ├─ NLinear.py
-│     │  ├─ PatchTST.py
-│     │  ├─ Stat_models.py
-│     │  └─ Transformer.py
 │     ├─ utils/
-│     │  ├─ masking.py
-│     │  ├─ metrics.py
-│     │  ├─ prob.py
-│     │  ├─ timefeatures.py
-│     │  └─ tools.py
 │     ├─ demo.py
 │     └─ requirements.txt
 ├─ figure_drawing/
@@ -96,27 +52,62 @@ ICML2026/
 │  └─ figure_drawing.py
 └─ figure.png
 ```
-## Start
-### Install the libraries.
+
+---
+
+## Getting Started
+
+### Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### Calculate the upper bound
+---
+
+### Compute the Upper Bound
+
 ```bash
 python demo.py
 ```
-**The trainning will take a long time.** If you want to fast validate the result, please set the 'is_training=0' in config (In the demo.py line 156)! 
 
-The project has the trained weight of PatchTST under ETTh for $K=1,\ T=96,\ a=0.0,\ \varepsilon=1\sigma$!
+Training can be **time-consuming**.
+For quick validation using the provided pretrained weights, set:
 
-**After training, you need to set the 'is_training=0' in config! Then run the demo.py again to get the true result!**
-<img width="1133" height="699" alt="image" src="https://github.com/user-attachments/assets/81560b3c-0f28-48db-9e6f-b481b13db4fe" />
+```python
+is_training = 0
+```
 
-### Draw the figure of UpperBound-T
+in `demo.py` (line 156), and then run the script.
+
+The repository already includes trained PatchTST weights under ETTh1 with:
+[
+K=1,\quad T=96,\quad a=0.0,\quad \varepsilon = 1\sigma.
+]
+
+**Important:**
+If you train the model from scratch (`is_training = 1`), you must set `is_training = 0` **after training** and rerun `demo.py` to obtain the final numerical results.
+
+<p align="center">
+  <img width="1133" height="699" src="https://github.com/user-attachments/assets/81560b3c-0f28-48db-9e6f-b481b13db4fe" />
+</p>
+
+---
+
+### Visualize UpperBound–(T)
+
 ```bash
 python figure_drawing.py
 ```
+
+This script reproduces the **UpperBound–(T)** curves based on the provided experimental data.
+
+---
+
+如果你愿意，我可以再帮你做两件事之一：
+一是把这份 README 调到**更偏 ICML 官方补充材料 / artifact evaluation 风格**；
+二是压缩成一个**极简版匿名仓库 README**，只保留 reviewer 必要信息。
+
 
 
 
